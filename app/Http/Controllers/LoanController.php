@@ -32,7 +32,7 @@ class LoanController extends Controller
             $item->save();
 
             Loan::create([
-                'user_id' => Auth::id(),
+                'user_id' => 1,
                 'item_id' => $item->id,
                 'loan_date' => now(),
                 'status' => 'borrowed'
